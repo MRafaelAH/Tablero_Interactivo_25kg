@@ -1,0 +1,30 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="593" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-216.17006802721085" scrolly="155.54988662131518" scale="0.9070294784580498">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="z=Xb?A*:ZF;d#{U#I!~k" inline="false" x="138" y="-64">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false" useid="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id=",1)=B*j|)0(}1a;Czt{(">
+          <field name="FIELDNAME">-Q1</field>
+        </shadow>
+        <block type="allObjectList" id="sZQwWaP34+455Vrjct`s"></block>
+      </value>
+      <statement name="DO">
+        <block type="execScript" id="8tlZ@OPx9)k()lJCj}pn">
+          <value name="TEXT">
+            <shadow type="textMultiline" id=";c8Ie0ynJRiPKg{W9[@0">
+              <field name="HIGHLIGHT_MODE">javascript</field>
+              <field name="TEXT" editor-height="31" editor-width="784.4645244382423">// 1. Buscamos qué hay bajo el ratón/dedo en este instante&amp;#10;const raycaster = new v3d.Raycaster();&amp;#10;const mouse = new v3d.Vector2();&amp;#10;&amp;#10;// 2. Obtenemos la posición del clic desde el evento de Verge3D&amp;#10;mouse.x = (event.clientX / window.innerWidth) * 2 - 1;&amp;#10;mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;&amp;#10;&amp;#10;raycaster.setFromCamera(mouse, app.getCamera());&amp;#10;&amp;#10;// 3. Listamos los objetos tocados&amp;#10;const intersects = raycaster.intersectObjects(app.scene.children, true);&amp;#10;&amp;#10;if (intersects.length &gt; 0) {&amp;#10;    // El primer objeto de la lista es el que está más cerca de la cámara&amp;#10;    var nombreReal = intersects[0].object.name;&amp;#10;    console.log("---------------------------------");&amp;#10;    console.log("OBJETO REAL EN ESCENA: [" + nombreReal + "]");&amp;#10;    console.log("---------------------------------");&amp;#10;} else {&amp;#10;    console.log("Clic en el vacío: No se tocó ningún objeto.");&amp;#10;}</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="804" viewport-y="39" viewport-w="714" viewport-h="648.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
