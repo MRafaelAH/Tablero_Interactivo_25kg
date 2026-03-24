@@ -1,0 +1,910 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="1348" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="1265.2534257255288" scrolly="-1229.7012585384716" scale="0.7223339291409174">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</variable>
+      <variable id="_@Dc|ShN8=6ZI,g=6^xt">-Q1</variable>
+      <variable id="SN3mCJS,lyr3yWcW5?+f">-KM1</variable>
+      <variable id="8k|.xm**6gbi+wrsWwHN">existe_variable</variable>
+      <variable id="qmY}[^C3~#Z8b1(zD0`~">-Q2</variable>
+      <variable id=".jrPe*x1u#u=ru;uf228">GI L208S</variable>
+      <variable id="frVoaJBjeIW8tTL|H):L">XD3-24RT-C</variable>
+      <variable id="0KX|b0Qen=Kaw.CcLxcn">-K2</variable>
+      <variable id="Zmgb^{Yq(8zdv(!G~=fP">-K3</variable>
+      <variable id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="execScript" id="@8KQ/Q}s7h6%TDaLGmo*" x="-1274" y="-685">
+      <value name="TEXT">
+        <shadow type="textMultiline" id="5RonG$K[7==!GBDlZ;`[">
+          <field name="HIGHLIGHT_MODE">javascript</field>
+          <field name="TEXT" editor-height="15" editor-width="787.9075">// --- SOLUCIÓN PARA EL ERROR DE 'LENGTH' ---&amp;#10;if (!app.postprocessing) {&amp;#10;    // Solo intentamos activar si el renderizador está realmente listo&amp;#10;    if (app.renderer &amp;&amp; app.scene &amp;&amp; app.getCamera()) {&amp;#10;        try {&amp;#10;            app.enablePostprocessing();&amp;#10;        } catch (e) {&amp;#10;            console.warn("Verge3D aún se está preparando... reintentando en el próximo clic.");&amp;#10;            return; // Salimos del clic para evitar que el error rompa el resto del script&amp;#10;        }&amp;#10;    } else {&amp;#10;        return; // No hacemos nada hasta que el motor esté listo&amp;#10;    }&amp;#10;}&amp;#10;</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="variables_set" id="X]w81K63p]A?8gkyZ+4+">
+          <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+          <value name="VALUE">
+            <block type="text" id="|gpp#(sx7b~XiB~a9(J;">
+              <field name="TEXT">Ninguno</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set" id="r+Q!BGB8{fw;pYUA%}OO">
+              <field name="VAR" id="_@Dc|ShN8=6ZI,g=6^xt">-Q1</field>
+              <value name="VALUE">
+                <block type="lists_create_with" id="9^.OWTc`:J?-P`LUuU-6">
+                  <mutation items="17"></mutation>
+                  <value name="ADD0">
+                    <block type="objectList" id="4AR;Iit*9ur{|jM|}A,7">
+                      <field name="FIELDNAME">-Q1</field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="objectList" id="W0TK~R7oU#paF4/2[et=">
+                      <field name="FIELDNAME">-KM1</field>
+                    </block>
+                  </value>
+                  <value name="ADD2">
+                    <block type="objectList" id="#sq@giSi=.YeF-x+nO2|">
+                      <field name="FIELDNAME">GI L208S</field>
+                    </block>
+                  </value>
+                  <value name="ADD3">
+                    <block type="objectList" id="=%p.e]1ikMWP?WQj:*{!">
+                      <field name="FIELDNAME">358288:1</field>
+                    </block>
+                  </value>
+                  <value name="ADD4">
+                    <block type="objectList" id="[oa(OUYfmTAN/?[n@T%y">
+                      <field name="FIELDNAME">358288:2</field>
+                    </block>
+                  </value>
+                  <value name="ADD5">
+                    <block type="objectList" id="I^T4nhEOD{jtkUh;9v0P">
+                      <field name="FIELDNAME">358288:3</field>
+                    </block>
+                  </value>
+                  <value name="ADD6">
+                    <block type="objectList" id="zYq7H.=h|j6tn;pFJN!;">
+                      <field name="FIELDNAME">Cable 1</field>
+                    </block>
+                  </value>
+                  <value name="ADD7">
+                    <block type="objectList" id="2m%p^:P[`Sl/m^=I:e)9">
+                      <field name="FIELDNAME">Cable 2</field>
+                    </block>
+                  </value>
+                  <value name="ADD8">
+                    <block type="objectList" id="o/iU2Y{YNzC|jMqw*3XI">
+                      <field name="FIELDNAME">Cable 3</field>
+                    </block>
+                  </value>
+                  <value name="ADD9">
+                    <block type="objectList" id="#H15sI6aOj5Byh`6iA$h">
+                      <field name="FIELDNAME">Cable 7</field>
+                    </block>
+                  </value>
+                  <value name="ADD10">
+                    <block type="objectList" id="hzT?42:9sUgrj{]rCdX+">
+                      <field name="FIELDNAME">Cable 8</field>
+                    </block>
+                  </value>
+                  <value name="ADD11">
+                    <block type="objectList" id="zZOH@+~}-mPXXf,8;;D$">
+                      <field name="FIELDNAME">Cable 5</field>
+                    </block>
+                  </value>
+                  <value name="ADD12">
+                    <block type="objectList" id="jd@c/~AB|O_^6{usp$ve">
+                      <field name="FIELDNAME">Cable 6</field>
+                    </block>
+                  </value>
+                  <value name="ADD13">
+                    <block type="objectList" id="Zk5RkUN~#N[-W(!O%;4*">
+                      <field name="FIELDNAME">Cable 9</field>
+                    </block>
+                  </value>
+                  <value name="ADD14">
+                    <block type="objectList" id="yA`0.alK.8)mk/QB$/AR">
+                      <field name="FIELDNAME">Cable 10</field>
+                    </block>
+                  </value>
+                  <value name="ADD15">
+                    <block type="objectList" id=")x?@r`)7jwu8H6,;?-`C">
+                      <field name="FIELDNAME">358288:1.001</field>
+                    </block>
+                  </value>
+                  <value name="ADD16">
+                    <block type="objectList" id="4^vY{Q?smd!x^2Iy^j.4">
+                      <field name="FIELDNAME">358288:1.002</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" id="=(VVw(#~b2wgF_0Js^On">
+                  <field name="VAR" id="SN3mCJS,lyr3yWcW5?+f">-KM1</field>
+                  <value name="VALUE">
+                    <block type="lists_create_with" id="MzlU[v/9l]i?tob}G/F*">
+                      <mutation items="15"></mutation>
+                      <value name="ADD0">
+                        <block type="objectList" id="[^tM5k+9:n8VN{/7DE2q">
+                          <field name="FIELDNAME">-Q1</field>
+                        </block>
+                      </value>
+                      <value name="ADD1">
+                        <block type="objectList" id="Q`f,|K`pu4Y;{}GRgAu-">
+                          <field name="FIELDNAME">358288:10</field>
+                        </block>
+                      </value>
+                      <value name="ADD2">
+                        <block type="objectList" id="GpL+]Oqg@zlo1|Gb-d=`">
+                          <field name="FIELDNAME">GI L208S</field>
+                        </block>
+                      </value>
+                      <value name="ADD3">
+                        <block type="objectList" id="8AR`jXkEOX_Py-rI0tU1">
+                          <field name="FIELDNAME">-KM1</field>
+                        </block>
+                      </value>
+                      <value name="ADD4">
+                        <block type="objectList" id="=ra.#xkUw[If8Kj%LjGY">
+                          <field name="FIELDNAME">-Q2</field>
+                        </block>
+                      </value>
+                      <value name="ADD5">
+                        <block type="objectList" id="]fT]A!HS/eKW./+BRr})">
+                          <field name="FIELDNAME">-S3</field>
+                        </block>
+                      </value>
+                      <value name="ADD6">
+                        <block type="objectList" id="{;!4m%S8@whWn?%hq8jS">
+                          <field name="FIELDNAME">Cable 13</field>
+                        </block>
+                      </value>
+                      <value name="ADD7">
+                        <block type="objectList" id="v0(PNthZ8Ntcz*;%d,+1">
+                          <field name="FIELDNAME">Cable 14</field>
+                        </block>
+                      </value>
+                      <value name="ADD8">
+                        <block type="objectList" id="lk%I#5P{`Q+$H;gn-0C/">
+                          <field name="FIELDNAME">Cable 74</field>
+                        </block>
+                      </value>
+                      <value name="ADD9">
+                        <block type="objectList" id="z}lmE0r*:xdE{x*fk]zt">
+                          <field name="FIELDNAME">Cable 7</field>
+                        </block>
+                      </value>
+                      <value name="ADD10">
+                        <block type="objectList" id="82/PAw0%w]9?zxKTOg@%">
+                          <field name="FIELDNAME">Cable 49</field>
+                        </block>
+                      </value>
+                      <value name="ADD11">
+                        <block type="objectList" id=":Ix*4IgYx#p_(0fJ[CNl">
+                          <field name="FIELDNAME">Cable 11</field>
+                        </block>
+                      </value>
+                      <value name="ADD12">
+                        <block type="objectList" id="iD}hIrF=nJjoZ]1wmwU6">
+                          <field name="FIELDNAME">Cable 12</field>
+                        </block>
+                      </value>
+                      <value name="ADD13">
+                        <block type="objectList" id="K%t~)8{p,dq5#hDl(]l}">
+                          <field name="FIELDNAME">Cable 9</field>
+                        </block>
+                      </value>
+                      <value name="ADD14">
+                        <block type="objectList" id="n8FVM$wJ.YvN$CX*Rf0!">
+                          <field name="FIELDNAME">Cable 5</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" id="`(l4HAoRt7KTvxR9e*?6">
+                      <field name="VAR" id="qmY}[^C3~#Z8b1(zD0`~">-Q2</field>
+                      <value name="VALUE">
+                        <block type="lists_create_with" id="FHFmauNO@~*62e8F6(`t">
+                          <mutation items="9"></mutation>
+                          <value name="ADD0">
+                            <block type="objectList" id="*M3)yUb,l|[[])j,r!-)">
+                              <field name="FIELDNAME">-Q2</field>
+                            </block>
+                          </value>
+                          <value name="ADD1">
+                            <block type="objectList" id="`o=m)QT}:MFM{w+RJ^*%">
+                              <field name="FIELDNAME">Cable 18</field>
+                            </block>
+                          </value>
+                          <value name="ADD2">
+                            <block type="objectList" id="TN]^K0uk(E-GToY9a{c{">
+                              <field name="FIELDNAME">Fuente de Voltaje 24v 5A:1</field>
+                            </block>
+                          </value>
+                          <value name="ADD3">
+                            <block type="objectList" id="H;X}bS6@StI+SQ_,f[bC">
+                              <field name="FIELDNAME">Cable 16</field>
+                            </block>
+                          </value>
+                          <value name="ADD4">
+                            <block type="objectList" id="(jHie0k]KA8w|{!j|=~[">
+                              <field name="FIELDNAME">Tomacorriente</field>
+                            </block>
+                          </value>
+                          <value name="ADD5">
+                            <block type="objectList" id="yVI=OhO}CLcbMsf2Aq|V">
+                              <field name="FIELDNAME">Cable 27</field>
+                            </block>
+                          </value>
+                          <value name="ADD6">
+                            <block type="objectList" id="P1[y@wlVh8Lniaai$-{q">
+                              <field name="FIELDNAME">Cable 13</field>
+                            </block>
+                          </value>
+                          <value name="ADD7">
+                            <block type="objectList" id="8xRv4R)}[GSbm}AL.NE@">
+                              <field name="FIELDNAME">-KM1</field>
+                            </block>
+                          </value>
+                          <value name="ADD8">
+                            <block type="objectList" id="Cujbbqty]k+Fd^Z,W61x">
+                              <field name="FIELDNAME">Cable 14</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="variables_set" id="*[Q2CR5rIBV:cDh${#~(">
+                          <field name="VAR" id=".jrPe*x1u#u=ru;uf228">GI L208S</field>
+                          <value name="VALUE">
+                            <block type="lists_create_with" id="7|sgE}IeOEb~Bq0)y1n-">
+                              <mutation items="10"></mutation>
+                              <value name="ADD0">
+                                <block type="objectList" id="7qHM`l2+{y~}3k|eumd3">
+                                  <field name="FIELDNAME">GI L208S</field>
+                                </block>
+                              </value>
+                              <value name="ADD1">
+                                <block type="objectList" id="CY(R51=nzId:*0ge=P/3">
+                                  <field name="FIELDNAME">Cable 8</field>
+                                </block>
+                              </value>
+                              <value name="ADD2">
+                                <block type="objectList" id="AhVx/_aO@BU}T!wtikN2">
+                                  <field name="FIELDNAME">-Q1</field>
+                                </block>
+                              </value>
+                              <value name="ADD3">
+                                <block type="objectList" id="a{Lr;b:uEJ$ncS]84y$-">
+                                  <field name="FIELDNAME">Cable 6</field>
+                                </block>
+                              </value>
+                              <value name="ADD4">
+                                <block type="objectList" id="Lgb0+a9+]T)93M47#g@h">
+                                  <field name="FIELDNAME">Cable 10</field>
+                                </block>
+                              </value>
+                              <value name="ADD5">
+                                <block type="objectList" id="#Wo_uB7PeqOh5mL3,WK]">
+                                  <field name="FIELDNAME">Cable 21</field>
+                                </block>
+                              </value>
+                              <value name="ADD6">
+                                <block type="objectList" id="]q?F/@)ZEg:GYJ@*6Woo">
+                                  <field name="FIELDNAME">-S3</field>
+                                </block>
+                              </value>
+                              <value name="ADD7">
+                                <block type="objectList" id="~17dxPDBasH!V,aFpPM%">
+                                  <field name="FIELDNAME">Cable 11</field>
+                                </block>
+                              </value>
+                              <value name="ADD8">
+                                <block type="objectList" id="Vnp4K,=~-+7(/z0~L-D:">
+                                  <field name="FIELDNAME">-KM1</field>
+                                </block>
+                              </value>
+                              <value name="ADD9">
+                                <block type="objectList" id="DbFKe*/d)Z_h[%9T]Y3d">
+                                  <field name="FIELDNAME">Cable 76</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="variables_set" id="wfjkchm%NZG/;5z{2TjA">
+                              <field name="VAR" id="frVoaJBjeIW8tTL|H):L">XD3-24RT-C</field>
+                              <value name="VALUE">
+                                <block type="lists_create_with" id="_QeJ]B8ksT~NCajrhk@v">
+                                  <mutation items="39"></mutation>
+                                  <value name="ADD0">
+                                    <block type="objectList" id="7I(C`h9a%a=}~Tz]B^[?">
+                                      <field name="FIELDNAME">XD3-24RT-C</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD1">
+                                    <block type="objectList" id="rN0{t[w5*L@cST5:h}s#">
+                                      <field name="FIELDNAME">Cable 44</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD2">
+                                    <block type="objectList" id="j%^{$3n7|ywH?!aLd?c?">
+                                      <field name="FIELDNAME">TS3 700-M</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD3">
+                                    <block type="objectList" id="9^;*ZTa(?``ieI-TT]WT">
+                                      <field name="FIELDNAME">Cable 17</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD4">
+                                    <block type="objectList" id="Jb`#jwv[@k;VzhRT6K9T">
+                                      <field name="FIELDNAME">Fuente de Voltaje 24v 5A:1</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD5">
+                                    <block type="objectList" id="@8|rGtMsM/+$=0L_-Tk%">
+                                      <field name="FIELDNAME">Cable 45</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD6">
+                                    <block type="objectList" id="h#DK%n|s3YM)32CO`Vme">
+                                      <field name="FIELDNAME">Cable 19</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD7">
+                                    <block type="objectList" id="PI9C59zHMT~5+}`)`$}#">
+                                      <field name="FIELDNAME">Cable 60</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD8">
+                                    <block type="objectList" id="l1B?q}]pWMIvQNdH)@C`">
+                                      <field name="FIELDNAME">-S1</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD9">
+                                    <block type="objectList" id=":xw_Rp-FOl}1m5;i)_L6">
+                                      <field name="FIELDNAME">Cable 59</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD10">
+                                    <block type="objectList" id="jw:GNqOZT!4*nAXTaj/]">
+                                      <field name="FIELDNAME">358288:14</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD11">
+                                    <block type="objectList" id="yYT9@[%r[U#+0I}s`SQ^">
+                                      <field name="FIELDNAME">Cable 61</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD12">
+                                    <block type="objectList" id="U4oZXp+m!!Y7X,ja|29{">
+                                      <field name="FIELDNAME">Cable 63</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD13">
+                                    <block type="objectList" id="zkomnE#F[1C|N[It^Lw[">
+                                      <field name="FIELDNAME">358288:15</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD14">
+                                    <block type="objectList" id="Vy%s;^eGdac:(S$+:yc@">
+                                      <field name="FIELDNAME">358288:1.011</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD15">
+                                    <block type="objectList" id="O8Le7z}!V;?*=GJLzA3]">
+                                      <field name="FIELDNAME">Cable 64</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD16">
+                                    <block type="objectList" id="tC7bq=zU?FWJ^HsZu5jQ">
+                                      <field name="FIELDNAME">358288:17</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD17">
+                                    <block type="objectList" id="x5o=4ZYCF*Py|/BI6J|~">
+                                      <field name="FIELDNAME">Cable 67</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD18">
+                                    <block type="objectList" id=",Jol#0`y^pHGAVFM~`:!">
+                                      <field name="FIELDNAME">358288:19</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD19">
+                                    <block type="objectList" id="6~ux*=EhZEHCgFOIP0[^">
+                                      <field name="FIELDNAME">Cable 69</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD20">
+                                    <block type="objectList" id="mND4lN-K@FaKj|uX2XSF">
+                                      <field name="FIELDNAME">358288:22</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD21">
+                                    <block type="objectList" id="#$L[]8.JLOO+V?kbUebO">
+                                      <field name="FIELDNAME">Cable 72</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD22">
+                                    <block type="objectList" id="nS_$5ey;e:v]jCOYv}Oi">
+                                      <field name="FIELDNAME">-S2</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD23">
+                                    <block type="objectList" id="cAj1Ml~sT)+oK16zNoN8">
+                                      <field name="FIELDNAME">Cable 46</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD24">
+                                    <block type="objectList" id="2o7Zkk#YLWC%pva5_+7G">
+                                      <field name="FIELDNAME">Cable 36</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD25">
+                                    <block type="objectList" id="f.Izdl*vfzDSW_(Rxw$6">
+                                      <field name="FIELDNAME">-K2</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD26">
+                                    <block type="objectList" id="zHl4MQx=L9A)h,8-/ctv">
+                                      <field name="FIELDNAME">Cable 47</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD27">
+                                    <block type="objectList" id="{V^WbCuOe(y|M1=4i57r">
+                                      <field name="FIELDNAME">Cable 48</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD28">
+                                    <block type="objectList" id="ZosNw1,;#(}AS[hTTAH:">
+                                      <field name="FIELDNAME">Cable 37</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD29">
+                                    <block type="objectList" id=":P2:A`cQ_GT7#Fx67x3[">
+                                      <field name="FIELDNAME">-K3</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD30">
+                                    <block type="objectList" id="+i(LZkIXVfxBFTInT4#F">
+                                      <field name="FIELDNAME">Cable 57</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD31">
+                                    <block type="objectList" id="fXq=NN_{xg/gj_isKi5|">
+                                      <field name="FIELDNAME">Cable 38</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD32">
+                                    <block type="objectList" id="z.;R#Pba0(wi~hKG[a,y">
+                                      <field name="FIELDNAME">-K4</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD33">
+                                    <block type="objectList" id="O0AMvbxYxd!3sMx3q,.z">
+                                      <field name="FIELDNAME">Cable 39</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD34">
+                                    <block type="objectList" id="!2^gSFM)|N;b;VX$@y0b">
+                                      <field name="FIELDNAME">-K5</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD35">
+                                    <block type="objectList" id="Y`5N-rRmUaNA8f8_1;|t">
+                                      <field name="FIELDNAME">Cable 42</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD36">
+                                    <block type="objectList" id="OB!cv:OjK~7x*;1+px0W">
+                                      <field name="FIELDNAME">-K6</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD37">
+                                    <block type="objectList" id="h%+loxXLjzsb~@Cb7oko">
+                                      <field name="FIELDNAME">Cable 43</field>
+                                    </block>
+                                  </value>
+                                  <value name="ADD38">
+                                    <block type="objectList" id="iH;gbjn6?B.xBUDDeju{">
+                                      <field name="FIELDNAME">-K7</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="variables_set" id="$V..5K^7`HsP{e9n2APJ">
+                                  <field name="VAR" id="0KX|b0Qen=Kaw.CcLxcn">-K2</field>
+                                  <value name="VALUE">
+                                    <block type="lists_create_with" id="h~wcZc]uHePqPOlm^T+X">
+                                      <mutation items="10"></mutation>
+                                      <value name="ADD0">
+                                        <block type="objectList" id=".ZRhRwE]0wRYZb%bZ;4d">
+                                          <field name="FIELDNAME">-K2</field>
+                                        </block>
+                                      </value>
+                                      <value name="ADD1">
+                                        <block type="objectList" id="Tt~/3P~sO==8[Y`d}Qu)">
+                                          <field name="FIELDNAME">Cable 36</field>
+                                        </block>
+                                      </value>
+                                      <value name="ADD2">
+                                        <block type="objectList" id="uz_X8bh?3H5;X[GXK{$]">
+                                          <field name="FIELDNAME">XD3-24RT-C</field>
+                                        </block>
+                                      </value>
+                                      <value name="ADD3">
+                                        <block type="objectList" id="ubd^PG|O3C|Q%|azdsT8">
+                                          <field name="FIELDNAME">Cable 32</field>
+                                        </block>
+                                      </value>
+                                      <value name="ADD4">
+                                        <block type="objectList" id="q]:`+~:6L#Q2YC@/r},h">
+                                          <field name="FIELDNAME">-K3</field>
+                                        </block>
+                                      </value>
+                                      <value name="ADD5">
+                                        <block type="objectList" id="2W;bzI-G_j#%@k*O,Dtf">
+                                          <field name="FIELDNAME">Cable 22</field>
+                                        </block>
+                                      </value>
+                                      <value name="ADD6">
+                                        <block type="objectList" id=",t2@*ZhT_IAb}Ru0,X^r">
+                                          <field name="FIELDNAME">Cable 15</field>
+                                        </block>
+                                      </value>
+                                      <value name="ADD7">
+                                        <block type="objectList" id="(!Szt]92:z!cE5vvCM];">
+                                          <field name="FIELDNAME">Fuente de Voltaje 24v 5A:1</field>
+                                        </block>
+                                      </value>
+                                      <value name="ADD8">
+                                        <block type="objectList" id="WIOh$%47HK/Adb_)*h0+">
+                                          <field name="FIELDNAME">Cable 24</field>
+                                        </block>
+                                      </value>
+                                      <value name="ADD9">
+                                        <block type="objectList" id=",/Y2u@aw(9^.-hR`Jgk=">
+                                          <field name="FIELDNAME">358288:5</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="WeoE|FhlZAKJvtDv)7d~">
+                                      <field name="VAR" id="Zmgb^{Yq(8zdv(!G~=fP">-K3</field>
+                                      <value name="VALUE">
+                                        <block type="lists_create_with" id="73leYk)5w;CBPt,Lf,ma">
+                                          <mutation items="11"></mutation>
+                                          <value name="ADD0">
+                                            <block type="objectList" id="Rh:Q5{-z?}/k`#RB66.q">
+                                              <field name="FIELDNAME">-K3</field>
+                                            </block>
+                                          </value>
+                                          <value name="ADD1">
+                                            <block type="objectList" id="|Tx%Q62,WLVUWppB!owP">
+                                              <field name="FIELDNAME">Cable 37</field>
+                                            </block>
+                                          </value>
+                                          <value name="ADD2">
+                                            <block type="objectList" id="F(J7uR2I1x?]-9C7]jE{">
+                                              <field name="FIELDNAME">XD3-24RT-C</field>
+                                            </block>
+                                          </value>
+                                          <value name="ADD3">
+                                            <block type="objectList" id="jVq)enjv;=ngi2=:pN%_">
+                                              <field name="FIELDNAME">Cable 23</field>
+                                            </block>
+                                          </value>
+                                          <value name="ADD4">
+                                            <block type="objectList" id="%TpElR4|psn8[ISew$3R">
+                                              <field name="FIELDNAME">-K4</field>
+                                            </block>
+                                          </value>
+                                          <value name="ADD5">
+                                            <block type="objectList" id="qn.oEvAVAosuLoTBJyj!">
+                                              <field name="FIELDNAME">Cable 32</field>
+                                            </block>
+                                          </value>
+                                          <value name="ADD6">
+                                            <block type="objectList" id="IckI|T)@j1{()LlnXl^O">
+                                              <field name="FIELDNAME">-K2</field>
+                                            </block>
+                                          </value>
+                                          <value name="ADD7">
+                                            <block type="objectList" id="iuyHev8#cx1wk5ANe{xo">
+                                              <field name="FIELDNAME">Cable 25</field>
+                                            </block>
+                                          </value>
+                                          <value name="ADD8">
+                                            <block type="objectList" id="wk2Z0pR:PvOS/E5)74Jn">
+                                              <field name="FIELDNAME">Cable 22</field>
+                                            </block>
+                                          </value>
+                                          <value name="ADD9">
+                                            <block type="objectList" id="eDXM~=kJ5nJzTR`a=wC=">
+                                              <field name="FIELDNAME">Cable 28</field>
+                                            </block>
+                                          </value>
+                                          <value name="ADD10">
+                                            <block type="objectList" id="_GT(MH.ZpC;4I,gFdL4V">
+                                              <field name="FIELDNAME">358288:6</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="z=Xb?A*:ZF;d#{U#I!~k" inline="false" x="-643" y="-321">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false" useid="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id=",1)=B*j|)0(}1a;Czt{(">
+          <field name="FIELDNAME">-Q1</field>
+        </shadow>
+        <block type="allObjectList" id="sZQwWaP34+455Vrjct`s"></block>
+      </value>
+      <statement name="DO">
+        <block type="execScript" id="h7d0LJzwVs`]bN%9M;zV">
+          <value name="TEXT">
+            <shadow type="textMultiline" id="@=H,6FYw!RNg.~oX0HM.">
+              <field name="HIGHLIGHT_MODE">javascript</field>
+              <field name="TEXT" editor-height="31" editor-width="784.4645244382423">// 1. Configuración de detección&amp;#10;const rect = app.container.getBoundingClientRect();&amp;#10;const mouse = new v3d.Vector2();&amp;#10;&amp;#10;mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;&amp;#10;mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;&amp;#10;&amp;#10;// 2. Raycaster&amp;#10;const raycaster = new v3d.Raycaster();&amp;#10;raycaster.setFromCamera(mouse, app.getCamera());&amp;#10;const intersects = raycaster.intersectObjects(app.scene.children, true);&amp;#10;&amp;#10;// Inicializamos la señal en 0 (No hay coincidencia)&amp;#10;VARS['existe_variable'] = 0;&amp;#10;&amp;#10;if (intersects.length &gt; 0) {&amp;#10;    let obj = intersects[0].object;&amp;#10;    let nombreDetectado = "";&amp;#10;&amp;#10;    // Buscamos el nombre real&amp;#10;    if (obj.parent &amp;&amp; (obj.name.includes('Mesh') || obj.name.includes('Object'))) {&amp;#10;        nombreDetectado = obj.parent.name;&amp;#10;    } else {&amp;#10;        nombreDetectado = obj.name;&amp;#10;    }&amp;#10;&amp;#10;    // --- VALIDACIÓN DE SEÑAL ---&amp;#10;    // Si el nombre detectado existe como variable en Puzzles...&amp;#10;    if (VARS[nombreDetectado] !== undefined) {&amp;#10;        &amp;#10;        VARS['objeto_detectado'] = nombreDetectado; // Pasamos el nombre&amp;#10;        VARS['existe_variable'] = 1;               // ¡Activamos la señal!&amp;#10;        &amp;#10;        console.log("Señal ACTIVADA para: " + nombreDetectado);&amp;#10;    } else {&amp;#10;        // No hacemos nada con 'objeto_detectado', la señal se queda en 0&amp;#10;        console.log("Señal RECHAZADA: No hay variable para " + nombreDetectado);&amp;#10;    }&amp;#10;}</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="console.log" id="%/ksvCQ6(^He-T[;Eu@M">
+              <value name="VALUE">
+                <shadow type="text" id="=86$7!:cM-?B7:Pr`s)d">
+                  <field name="TEXT">Hello, Verge!</field>
+                </shadow>
+                <block type="variables_get" id="*^O{o:Y%!u,o#gn*+E^S">
+                  <field name="VAR" id="8k|.xm**6gbi+wrsWwHN">existe_variable</field>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse" id="B.LR{rj?;DZ}lc|PaeUj">
+                  <value name="IF0">
+                    <block type="logic_compare" id="+0;Ig;])P[4PE|t-^H)n">
+                      <field name="OP">EQ</field>
+                      <value name="A">
+                        <block type="variables_get" id="N2135T,[RfUCygf-Y[yZ">
+                          <field name="VAR" id="8k|.xm**6gbi+wrsWwHN">existe_variable</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number" id="z5WATo4*JpsdGMXg#c2Q">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_ifelse" id="EUCWTewqD.}F?6@W9cf@">
+                      <value name="IF0">
+                        <block type="logic_compare" id="WI}Q!QlueAWduPvFNObj">
+                          <field name="OP">EQ</field>
+                          <value name="A">
+                            <block type="variables_get" id="[{D:ILVS0V4@=i7](bwJ">
+                              <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="text" id="*na+3zhz`zJ0RccZZ}OA">
+                              <field name="TEXT">Ninguno</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="console.log" id="XBL=]jMa[Be_;stvJPfK">
+                          <value name="VALUE">
+                            <shadow type="text" id="=86$7!:cM-?B7:Pr`s)d">
+                              <field name="TEXT">Entre a boton activado</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="execScript" id="Mw0r+o2UuFC*ad{AqU2=">
+                              <value name="TEXT">
+                                <shadow type="textMultiline" id="TQ^i=n*pDmZmy48sJWlB">
+                                  <field name="HIGHLIGHT_MODE">javascript</field>
+                                  <field name="TEXT" editor-height="37" editor-width="787.9075">// 1. ASEGURAR POSTPROCESADO Y RENDER PASS&amp;#10;if (!app.postprocessing) {&amp;#10;    app.enablePostprocessing();&amp;#10;}&amp;#10;&amp;#10;// 2. DETECCIÓN (TU LÓGICA)&amp;#10;const raycaster = new v3d.Raycaster();&amp;#10;const mouse = new v3d.Vector2();&amp;#10;const rect = app.container.getBoundingClientRect();&amp;#10;&amp;#10;mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;&amp;#10;mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;&amp;#10;&amp;#10;raycaster.setFromCamera(mouse, app.getCamera());&amp;#10;const intersects = raycaster.intersectObjects(app.scene.children, true);&amp;#10;&amp;#10;if (intersects.length &gt; 0) {&amp;#10;    let obj = intersects[0].object;&amp;#10;    if (obj.parent &amp;&amp; (obj.name.includes('Mesh') || obj.name.includes('Object'))) {&amp;#10;        obj = obj.parent;&amp;#10;    }&amp;#10;&amp;#10;    // --- RECONSTRUCCIÓN SEGURA DEL COMPOSER ---&amp;#10;    if (!app.postprocessing.outlinePass) {&amp;#10;        // Bloqueamos el tono para evitar brillos raros&amp;#10;        app.renderer.toneMapping = v3d.NoToneMapping;&amp;#10;&amp;#10;        const composer = app.postprocessing.composer;&amp;#10;        &amp;#10;        // Buscamos el RenderPass original (la imagen del tablero)&amp;#10;        const renderPass = composer.passes.find(p =&gt; p instanceof v3d.RenderPass) &amp;#10;                           || new v3d.RenderPass(app.scene, app.getCamera());&amp;#10;&amp;#10;        // Creamos el OutlinePass&amp;#10;        const oPass = new v3d.OutlinePass(&amp;#10;            new v3d.Vector2(window.innerWidth, window.innerHeight), &amp;#10;            app.scene, &amp;#10;            app.getCamera()&amp;#10;        );&amp;#10;        &amp;#10;        oPass.edgeStrength = 5;&amp;#10;        oPass.edgeThickness = 1.5;&amp;#10;        oPass.visibleEdgeColor.set(0x00ff00); // Verde&amp;#10;        oPass.hiddenEdgeColor.set(0x003300);  // Verde oscuro para lo tapado&amp;#10;        oPass.renderToScreen = true; // &lt;--- ESTO EVITA QUE SE PONGA NEGRO&amp;#10;&amp;#10;        // Reensamblamos: primero la realidad, luego la silueta&amp;#10;        composer.passes = [renderPass, oPass];&amp;#10;        app.postprocessing.outlinePass = oPass;&amp;#10;&amp;#10;        // Sincronización de cámara en tiempo real&amp;#10;        if (!app.renderCallbacks.includes(updateOutlineCamera)) {&amp;#10;            app.renderCallbacks.push(updateOutlineCamera);&amp;#10;        }&amp;#10;    }&amp;#10;&amp;#10;    app.postprocessing.outlinePass.selectedObjects = [obj];&amp;#10;&amp;#10;    // Variables de Puzzles&amp;#10;    VARS['objeto_detectado'] = obj.name;&amp;#10;    VARS['existe_variable'] = (VARS[obj.name] !== undefined) ? 1 : 0;&amp;#10;&amp;#10;} else {&amp;#10;    if (app.postprocessing?.outlinePass) {&amp;#10;        app.postprocessing.outlinePass.selectedObjects = [];&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// Función de soporte (definirla una sola vez o dejarla fuera)&amp;#10;function updateOutlineCamera() {&amp;#10;    if (app.postprocessing?.outlinePass) {&amp;#10;        app.postprocessing.outlinePass.renderCamera = app.getCamera();&amp;#10;    }&amp;#10;}</field>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="execScript" id="bV5%IcKVP2|gBm#{Gj8U">
+                                  <value name="TEXT">
+                                    <shadow type="textMultiline" id="GQ)ul!9j[/LA4I^Q8v4d">
+                                      <field name="HIGHLIGHT_MODE">javascript</field>
+                                      <field name="TEXT" editor-height="37" editor-width="787.9075">const nombreABuscar = VARS['objeto_detectado'];&amp;#10;&amp;#10;// CORRECCIÓN: Si VARS[nombreABuscar] no existe, usamos una lista vacía []&amp;#10;const objetosAEstudiar = VARS[nombreABuscar] || []; &amp;#10;&amp;#10;const materialesExcepcion = ['-K2_Mat.023', '-K2_Mat.011', '-K4_Mat.023','-K5_Mat.023', '-K6_Mat.024', '-K7_Mat.023'];&amp;#10;const opacidadFondo = 0.04; &amp;#10;&amp;#10;&amp;#10;app.scene.traverse(obj =&gt; {&amp;#10;    if (obj.isMesh &amp;&amp; obj.material) {&amp;#10;        &amp;#10;        // Ahora .includes() no fallará porque objetosAEstudiar siempre será al menos []&amp;#10;        const esProtegido = objetosAEstudiar.includes(obj.name) || &amp;#10;                            (obj.parent &amp;&amp; objetosAEstudiar.includes(obj.parent.name));&amp;#10;&amp;#10;        const mats = Array.isArray(obj.material) ? obj.material : [obj.material];&amp;#10;&amp;#10;        mats.forEach(mat =&gt; {&amp;#10;            mat.transparent = true;&amp;#10;            &amp;#10;            if (materialesExcepcion.includes(mat.name)) {&amp;#10;                mat.opacity = 0.2;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(0.2);&amp;#10;            } &amp;#10;            else if (esProtegido) {&amp;#10;                mat.opacity = 1;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(1.0);&amp;#10;            } else {&amp;#10;                mat.opacity = opacidadFondo;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(opacidadFondo);&amp;#10;            }&amp;#10;            &amp;#10;            mat.needsUpdate = true;&amp;#10;        });&amp;#10;    }&amp;#10;});</field>
+                                    </shadow>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="aZ9XX/m;{NQr.k7lpv4v">
+                                      <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                      <value name="VALUE">
+                                        <block type="variables_get" id="jMrU2i--}JWGR5I)x{#[">
+                                          <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="variables_set" id="}or+Hm@s4UPUe0$8Te.?">
+                                          <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                          <value name="VALUE">
+                                            <block type="text" id="$9R!4-v%YUl?wvVaFW?g">
+                                              <field name="TEXT">Ocupado</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="console.log" id="%!4G0c/rb7{hoTQU+g9)">
+                                              <value name="VALUE">
+                                                <shadow type="text" id="E%bw:*c$I4Na(:Y*K/wL">
+                                                  <field name="TEXT">Hello, Verge!</field>
+                                                </shadow>
+                                                <block type="variables_get" id="_Eb,Ra7^f81KGC?XN7Io">
+                                                  <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="console.log" id="#lU^y!M}FkBLG11AV)f,">
+                                                  <value name="VALUE">
+                                                    <shadow type="text" id="H}8#TW2YV5yle%K9Hj.x">
+                                                      <field name="TEXT">Hello, Verge!</field>
+                                                    </shadow>
+                                                    <block type="variables_get" id="gJc3[@/7$nrmRWLxJMPn">
+                                                      <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="console.log" id="BUFEcZxSJXLB1_~#D7M^">
+                          <value name="VALUE">
+                            <shadow type="text" id="H}8#TW2YV5yle%K9Hj.x">
+                              <field name="TEXT">Llegue aqui</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="execScript" id="aV$#I0nX{zcdBv(;yGhd">
+                              <value name="TEXT">
+                                <shadow type="textMultiline" id="soV%mQT4,CBy}6^],}w(">
+                                  <field name="HIGHLIGHT_MODE">javascript</field>
+                                  <field name="TEXT" editor-height="32" editor-width="784.4645244382423">// 1. Configuración de detección (Corrección de clic)&amp;#10;const rect = app.container.getBoundingClientRect();&amp;#10;const mouse = new v3d.Vector2();&amp;#10;&amp;#10;mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;&amp;#10;mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;&amp;#10;&amp;#10;// 2. Raycaster&amp;#10;const raycaster = new v3d.Raycaster();&amp;#10;raycaster.setFromCamera(mouse, app.getCamera());&amp;#10;const intersects = raycaster.intersectObjects(app.scene.children, true);&amp;#10;&amp;#10;let nombreParaPuzzle = "ninguno";&amp;#10;&amp;#10;if (intersects.length &gt; 0) {&amp;#10;    let obj = intersects[0].object;&amp;#10;    &amp;#10;    // Si el nombre es genérico, buscamos al padre&amp;#10;    if (obj.parent &amp;&amp; (obj.name.includes('Mesh') || obj.name.includes('Object'))) {&amp;#10;        nombreParaPuzzle = obj.parent.name;&amp;#10;    } else {&amp;#10;        nombreParaPuzzle = obj.name;&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// 3. VINCULACIÓN CORRECTA (Para v4.12.0)&amp;#10;// En lugar de v3d.puzzles.vars, usamos el objeto VARS directamente&amp;#10;VARS['objeto_detectado'] = nombreParaPuzzle;&amp;#10;&amp;#10;console.log("Variable 'objeto_detectado' enviada a Puzzles: " + nombreParaPuzzle);</field>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="controls_if" id="nAS_#Grb^ZFN2szKdo(f">
+                                  <value name="IF0">
+                                    <block type="logic_compare" id="BgjN*%w2QX}u3h|~!J#N">
+                                      <field name="OP">EQ</field>
+                                      <value name="A">
+                                        <block type="variables_get" id="nKV:pE#7[Vhj3NcU^15E">
+                                          <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="variables_get" id="#%`(G;ABJUi%4X+]/L8)">
+                                          <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <statement name="DO0">
+                                    <block type="variables_set" id="4;n=V!7,C-t$LnD71wkc">
+                                      <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                      <value name="VALUE">
+                                        <block type="text" id="AETH%oYx8aJvo]e4$NG?">
+                                          <field name="TEXT">Ocupado</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="execScript" id="vRUv8]08^z(/Y$iG?yz0">
+                                          <value name="TEXT">
+                                            <shadow type="textMultiline" id="N^}smFnv`hjybc4Gk;t:">
+                                              <field name="HIGHLIGHT_MODE">javascript</field>
+                                              <field name="TEXT" editor-height="37" editor-width="787.9075">// 1. COMPROBACIÓN DE SEGURIDAD (Por si no se ha inicializado el post-processing)&amp;#10;if (!app.postprocessing) {&amp;#10;    app.enablePostprocessing();&amp;#10;}&amp;#10;&amp;#10;// 2. CONFIGURACIÓN DEL RAYCASTER (EL "PUNTERO" INVISIBLE)&amp;#10;const raycaster = new v3d.Raycaster();&amp;#10;const mouse = new v3d.Vector2();&amp;#10;const rect = app.container.getBoundingClientRect();&amp;#10;&amp;#10;// Convertimos la posición del mouse al espacio 3D de la cámara&amp;#10;mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;&amp;#10;mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;&amp;#10;&amp;#10;raycaster.setFromCamera(mouse, app.getCamera());&amp;#10;&amp;#10;// Buscamos qué objetos atravesó el "rayo" del clic&amp;#10;const intersects = raycaster.intersectObjects(app.scene.children, true);&amp;#10;&amp;#10;// 3. LÓGICA DE DETECCIÓN Y RESALTADO&amp;#10;if (intersects.length &gt; 0) {&amp;#10;    let obj = intersects[0].object;&amp;#10;&amp;#10;    // Subir al padre si el objeto es parte de un grupo (común en modelos CAD/Inventor)&amp;#10;    if (obj.parent &amp;&amp; (obj.name.includes('Mesh') || obj.name.includes('Object'))) {&amp;#10;        obj = obj.parent;&amp;#10;    }&amp;#10;&amp;#10;    // Accedemos al OutlinePass (la silueta)&amp;#10;    const outline = app.postprocessing.outlinePass;&amp;#10;&amp;#10;    if (outline) {&amp;#10;        // --- AQUÍ ESTÁ EL TRUCO DEL TOGGLE ---&amp;#10;        &amp;#10;        // ¿El objeto que tocamos ya está en la lista de resaltados?&amp;#10;        const estaSeleccionado = outline.selectedObjects.includes(obj);&amp;#10;&amp;#10;        if (estaSeleccionado) {&amp;#10;            // SI YA ESTABA: Lo quitamos (Limpiamos la selección)&amp;#10;            outline.selectedObjects = [];&amp;#10;            VARS['objeto_detectado'] = ""; // Limpiamos variable de Puzzle&amp;#10;            console.log("Desmarcado:", obj.name);&amp;#10;        } else {&amp;#10;            // SI NO ESTABA: Lo marcamos (Ponemos la silueta)&amp;#10;            outline.selectedObjects = [obj];&amp;#10;            VARS['objeto_detectado'] = obj.name; // Guardamos para Puzzles&amp;#10;            console.log("Marcado:", obj.name);&amp;#10;        }&amp;#10;    }&amp;#10;&amp;#10;    // Actualizamos si existe lógica personalizada para este componente&amp;#10;    VARS['existe_variable'] = (VARS[obj.name] !== undefined) ? 1 : 0;&amp;#10;&amp;#10;} else {&amp;#10;    // OPCIONAL: Si haces clic al fondo (al aire), quitar el resaltado actual&amp;#10;    if (app.postprocessing?.outlinePass) {&amp;#10;        app.postprocessing.outlinePass.selectedObjects = [];&amp;#10;        VARS['objeto_detectado'] = "";&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// --- FUNCIÓN DE SOPORTE PARA LA CÁMARA ---&amp;#10;// (Verge3D necesita saber si moviste la cámara para que la silueta no se desfase)&amp;#10;if (!app.renderCallbacks.includes(actualizarCamaraOutline)) {&amp;#10;    app.renderCallbacks.push(actualizarCamaraOutline);&amp;#10;}&amp;#10;&amp;#10;function actualizarCamaraOutline() {&amp;#10;    if (app.postprocessing?.outlinePass) {&amp;#10;        app.postprocessing.outlinePass.renderCamera = app.getCamera();&amp;#10;    }&amp;#10;}</field>
+                                            </shadow>
+                                          </value>
+                                          <next>
+                                            <block type="execScript" id="6NzQaqFP{#)~=3|*zfIF">
+                                              <value name="TEXT">
+                                                <shadow type="textMultiline" id="U*ae|cj0%1@Fa,]B0d.7">
+                                                  <field name="HIGHLIGHT_MODE">javascript</field>
+                                                  <field name="TEXT" editor-height="25" editor-width="787.9075">const nombreABuscar = VARS['objeto_detectado'];&amp;#10;&amp;#10;// CORRECCIÓN: Si VARS[nombreABuscar] no existe, usamos una lista vacía []&amp;#10;const objetosAEstudiar = VARS[nombreABuscar] || []; &amp;#10;&amp;#10;const materialesExcepcion = ['-K2_Mat.023', '-K2_Mat.011', '-K4_Mat.023','-K5_Mat.023', '-K6_Mat.024', '-K7_Mat.023'];&amp;#10;const opacidadFondo = 1; &amp;#10;&amp;#10;app.scene.traverse(obj =&gt; {&amp;#10;    if (obj.isMesh &amp;&amp; obj.material) {&amp;#10;        &amp;#10;        // Ahora .includes() no fallará porque objetosAEstudiar siempre será al menos []&amp;#10;        const esProtegido = objetosAEstudiar.includes(obj.name) || &amp;#10;                            (obj.parent &amp;&amp; objetosAEstudiar.includes(obj.parent.name));&amp;#10;&amp;#10;        const mats = Array.isArray(obj.material) ? obj.material : [obj.material];&amp;#10;&amp;#10;        mats.forEach(mat =&gt; {&amp;#10;            mat.transparent = true;&amp;#10;            &amp;#10;            if (materialesExcepcion.includes(mat.name)) {&amp;#10;                mat.opacity = 0.2;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(0.2);&amp;#10;            } &amp;#10;            else if (esProtegido) {&amp;#10;                mat.opacity = 1;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(1.0);&amp;#10;            } else {&amp;#10;                mat.opacity = opacidadFondo;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(opacidadFondo);&amp;#10;            }&amp;#10;            &amp;#10;            mat.needsUpdate = true;&amp;#10;        });&amp;#10;    }&amp;#10;});</field>
+                                                </shadow>
+                                              </value>
+                                              <next>
+                                                <block type="variables_set" id="ZRTcHgIYF_i$^A-,vO29">
+                                                  <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                                  <value name="VALUE">
+                                                    <block type="text" id="(~/8|@w2ubEoUA~ZSb28">
+                                                      <field name="TEXT">Ninguno</field>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="console.log" id="J#TTMcab_vu5smy#V|Wy">
+                                                      <value name="VALUE">
+                                                        <shadow type="text" id="*(-oi@%/2Ps)7V8BBjhO">
+                                                          <field name="TEXT">Hello, Verge!</field>
+                                                        </shadow>
+                                                        <block type="variables_get" id="E!x#@864H`e@27EW6hO4">
+                                                          <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="console.log" id="JcB~22-lx3Q[+sV9)C^G">
+                                                          <value name="VALUE">
+                                                            <shadow type="text" id="cD5VwES@D~,wxuwtiy$2">
+                                                              <field name="TEXT">Hello, Verge!</field>
+                                                            </shadow>
+                                                            <block type="variables_get" id="72|rc{_V{i/#b;MU2:;n">
+                                                              <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1240" viewport-y="19" viewport-w="662" viewport-h="618.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
