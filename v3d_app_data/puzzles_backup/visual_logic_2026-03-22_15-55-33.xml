@@ -1,0 +1,14 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="593" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="21.242900552423407" scrolly="184.15507348948722" scale="0.6768393620286868">
+    <block xmlns="https://developers.google.com/blockly/xml" type="execScript" id="gMx0o=o;[0Lm_X{X$b{F" x="119" y="-79">
+      <value name="TEXT">
+        <shadow type="textMultiline" id="lG+2%Vc7c|T6-yYU);yB">
+          <field name="HIGHLIGHT_MODE">javascript</field>
+          <field name="TEXT" editor-height="10" editor-width="520">// Built-in variables: app, v3d, puzzles, VARS, PROC&amp;#10;app.scene.traverse(function(obj) {&amp;#10;    obj.material = new v3d.MeshBasicMaterial({&amp;#10;        color: new v3d.Color(&amp;#10;            Math.random(),&amp;#10;            Math.random(),&amp;#10;            Math.random()&amp;#10;        ),&amp;#10;    });&amp;#10;});</field>
+        </shadow>
+      </value>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1188" viewport-y="37" viewport-w="714" viewport-h="648.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
