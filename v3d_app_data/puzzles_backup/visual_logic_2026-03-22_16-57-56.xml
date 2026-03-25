@@ -1,0 +1,49 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="1029" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="117.13000589080195" scrolly="155.50226757369614" scale="0.9070294784580498">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="N`WqMNx0?-k`g5%6Anf3">tocado.</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="U]?Iuwl[S?#%Mw`#]2x!" inline="false" x="91" y="-43">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false" useid="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="INA$vdLR9,fGY|np4fVW">
+          <field name="FIELDNAME">-Q1</field>
+        </shadow>
+        <block type="objectList" id="eqJhvS1s!*J?^hF_R!?j">
+          <field name="FIELDNAME">-Q1</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="procedures_callnoreturn" id="o~KX97@BTp+;mK}ZA^a;">
+          <mutation name="FiltrarTablero.">
+            <arg name="tocado."></arg>
+          </mutation>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="4?d;!10^F!cr7a=|1^a}" x="279" y="94">
+      <mutation>
+        <arg name="tocado." varid="N`WqMNx0?-k`g5%6Anf3"></arg>
+      </mutation>
+      <field name="NAME">FiltrarTablero.</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="execScript" id="8tlZ@OPx9)k()lJCj}pn">
+          <value name="TEXT">
+            <shadow type="textMultiline" id=";c8Ie0ynJRiPKg{W9[@0">
+              <field name="HIGHLIGHT_MODE">javascript</field>
+              <field name="TEXT" editor-height="31" editor-width="784.4645244382423">// 1. DICCIONARIO DE CABLES Y PIEZAS&amp;#10;const grupos = {&amp;#10;    '-Q1': ['Cable 1', 'Cable 2', 'Cable 3', '-Q1'],&amp;#10;    '-KM1': ['Cable 5', 'Cable 6', 'Cable 7', '-KM1'],&amp;#10;    '358288:1': ['Cable 8', 'Cable 9', '358288:1'],&amp;#10;    // Simplemente agrega más líneas aquí siguiendo el mismo formato&amp;#10;};&amp;#10;&amp;#10;// 2. RECUPERAR LO QUE SE TOCÓ DESDE EL PUZZLE&amp;#10;const nombreTocado = v3d.puzzles.procedure_get_param('tocado');&amp;#10;const listaVisible = grupos[nombreTocado] || [nombreTocado];&amp;#10;&amp;#10;// 3. APLICAR TRANSPARENCIA A TODO LO QUE NO ESTÉ EN LA LISTA&amp;#10;app.scene.traverse(obj =&gt; {&amp;#10;    if (obj.isMesh &amp;&amp; obj.material) {&amp;#10;        const mats = Array.isArray(obj.material) ? obj.material : [obj.material];&amp;#10;        const esVisible = listaVisible.includes(obj.name);&amp;#10;&amp;#10;        mats.forEach(mat =&gt; {&amp;#10;            mat.transparent = true;&amp;#10;            mat.opacity = esVisible ? 1.0 : 0.1;&amp;#10;            mat.depthWrite = esVisible; &amp;#10;            &amp;#10;            if (mat.nodeValue) mat.nodeValue.fill(esVisible ? 1.0 : 0.1);&amp;#10;            mat.needsUpdate = true;&amp;#10;        });&amp;#10;    }&amp;#10;});</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1188" viewport-y="37" viewport-w="714" viewport-h="648.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

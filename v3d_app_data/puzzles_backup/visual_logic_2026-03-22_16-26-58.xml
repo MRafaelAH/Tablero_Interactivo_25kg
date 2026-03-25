@@ -1,0 +1,38 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="593" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="20.764211062948334" scrolly="183.94819139139395" scale="0.6768393620286868">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="|SwvWp,zm`OlIH{xyhbz" inline="false" x="249" y="9">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false" useid="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="C7_1{v5yI=}.bxUT`n06">
+          <field name="FIELDNAME">-Q1</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="console.log" id="@vd4A]c]!d~--mq*/|e$">
+          <value name="VALUE">
+            <shadow type="text" id="Y$$42jr_npNZa]X65|y`">
+              <field name="TEXT">Hello, Verge!</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="execScript" id="8tlZ@OPx9)k()lJCj}pn">
+              <value name="TEXT">
+                <shadow type="textMultiline" id=";c8Ie0ynJRiPKg{W9[@0">
+                  <field name="HIGHLIGHT_MODE">javascript</field>
+                  <field name="TEXT" editor-height="10" editor-width="520">// 1. Activar el sistema de post-procesado&amp;#10;if (!app.postprocessing) {&amp;#10;    app.enablePostprocessing();&amp;#10;}&amp;#10;&amp;#10;// 2. Crear el pase de Outline (Bordes)&amp;#10;const outlinePass = new v3d.OutlinePass(&amp;#10;    new v3d.Vector2(app.container.clientWidth, app.container.clientHeight), &amp;#10;    app.scene, &amp;#10;    app.camera&amp;#10;);&amp;#10;&amp;#10;// 3. CONFIGURACIÓN AGRESIVA PARA BORNERAS GRISES&amp;#10;// Usamos negro para que contraste y marque la separación&amp;#10;outlinePass.edgeStrength = 6.0;      // Fuerza alta para que la línea sea nítida&amp;#10;outlinePass.edgeGlow = 0.0;          // Sin brillo borroso, queremos precisión&amp;#10;outlinePass.edgeThickness = 1.5;     // Grosor suficiente para verse de lejos&amp;#10;outlinePass.visibleEdgeColor.set('#000000'); // LÍNEA NEGRA (simula la ranura física)&amp;#10;outlinePass.hiddenEdgeColor.set('#101010');  // Gris muy oscuro para bordes ocultos&amp;#10;&amp;#10;// 4. Aplicar el efecto a TODOS los objetos&amp;#10;const allMeshes = [];&amp;#10;app.scene.traverse(obj =&gt; {&amp;#10;    if (obj.isMesh) {&amp;#10;        allMeshes.push(obj);&amp;#10;    }&amp;#10;});&amp;#10;outlinePass.selectedObjects = allMeshes;&amp;#10;&amp;#10;// 5. Renderizar al final para no interferir con transparencias&amp;#10;outlinePass.renderToScreen = true;&amp;#10;app.composer.addPass(outlinePass);</field>
+                </shadow>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1188" viewport-y="37" viewport-w="714" viewport-h="648.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

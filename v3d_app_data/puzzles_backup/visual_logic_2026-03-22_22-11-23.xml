@@ -1,0 +1,512 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="593" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="708.4949280174878" scrolly="-713.9874309945923" scale="0.7959893115433262">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</variable>
+      <variable id="_@Dc|ShN8=6ZI,g=6^xt">-Q1</variable>
+      <variable id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</variable>
+      <variable id="8k|.xm**6gbi+wrsWwHN">existe_variable</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="X]w81K63p]A?8gkyZ+4+" x="-1223" y="-291">
+      <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+      <value name="VALUE">
+        <block type="text" id="|gpp#(sx7b~XiB~a9(J;">
+          <field name="TEXT">Ninguno</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="z=Xb?A*:ZF;d#{U#I!~k" inline="false" x="-643" y="-321">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false" useid="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id=",1)=B*j|)0(}1a;Czt{(">
+          <field name="FIELDNAME">-Q1</field>
+        </shadow>
+        <block type="allObjectList" id="sZQwWaP34+455Vrjct`s"></block>
+      </value>
+      <statement name="DO">
+        <block type="execScript" id="h7d0LJzwVs`]bN%9M;zV">
+          <value name="TEXT">
+            <shadow type="textMultiline" id="@=H,6FYw!RNg.~oX0HM.">
+              <field name="HIGHLIGHT_MODE">javascript</field>
+              <field name="TEXT" editor-height="31" editor-width="784.4645244382423">// 1. Configuración de detección&amp;#10;const rect = app.container.getBoundingClientRect();&amp;#10;const mouse = new v3d.Vector2();&amp;#10;&amp;#10;mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;&amp;#10;mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;&amp;#10;&amp;#10;// 2. Raycaster&amp;#10;const raycaster = new v3d.Raycaster();&amp;#10;raycaster.setFromCamera(mouse, app.getCamera());&amp;#10;const intersects = raycaster.intersectObjects(app.scene.children, true);&amp;#10;&amp;#10;// Inicializamos la señal en 0 (No hay coincidencia)&amp;#10;VARS['existe_variable'] = 0;&amp;#10;&amp;#10;if (intersects.length &gt; 0) {&amp;#10;    let obj = intersects[0].object;&amp;#10;    let nombreDetectado = "";&amp;#10;&amp;#10;    // Buscamos el nombre real&amp;#10;    if (obj.parent &amp;&amp; (obj.name.includes('Mesh') || obj.name.includes('Object'))) {&amp;#10;        nombreDetectado = obj.parent.name;&amp;#10;    } else {&amp;#10;        nombreDetectado = obj.name;&amp;#10;    }&amp;#10;&amp;#10;    // --- VALIDACIÓN DE SEÑAL ---&amp;#10;    // Si el nombre detectado existe como variable en Puzzles...&amp;#10;    if (VARS[nombreDetectado] !== undefined) {&amp;#10;        &amp;#10;        VARS['objeto_detectado'] = nombreDetectado; // Pasamos el nombre&amp;#10;        VARS['existe_variable'] = 1;               // ¡Activamos la señal!&amp;#10;        &amp;#10;        console.log("Señal ACTIVADA para: " + nombreDetectado);&amp;#10;    } else {&amp;#10;        // No hacemos nada con 'objeto_detectado', la señal se queda en 0&amp;#10;        console.log("Señal RECHAZADA: No hay variable para " + nombreDetectado);&amp;#10;    }&amp;#10;}</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="console.log" id="%/ksvCQ6(^He-T[;Eu@M">
+              <value name="VALUE">
+                <shadow type="text" id="=86$7!:cM-?B7:Pr`s)d">
+                  <field name="TEXT">Hello, Verge!</field>
+                </shadow>
+                <block type="variables_get" id="*^O{o:Y%!u,o#gn*+E^S">
+                  <field name="VAR" id="8k|.xm**6gbi+wrsWwHN">existe_variable</field>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse" id="B.LR{rj?;DZ}lc|PaeUj">
+                  <value name="IF0">
+                    <block type="logic_compare" id="+0;Ig;])P[4PE|t-^H)n">
+                      <field name="OP">EQ</field>
+                      <value name="A">
+                        <block type="variables_get" id="N2135T,[RfUCygf-Y[yZ">
+                          <field name="VAR" id="8k|.xm**6gbi+wrsWwHN">existe_variable</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number" id="z5WATo4*JpsdGMXg#c2Q">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_ifelse" id="EUCWTewqD.}F?6@W9cf@">
+                      <value name="IF0">
+                        <block type="logic_compare" id="WI}Q!QlueAWduPvFNObj">
+                          <field name="OP">EQ</field>
+                          <value name="A">
+                            <block type="variables_get" id="[{D:ILVS0V4@=i7](bwJ">
+                              <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="text" id="*na+3zhz`zJ0RccZZ}OA">
+                              <field name="TEXT">Ninguno</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="console.log" id="XBL=]jMa[Be_;stvJPfK">
+                          <value name="VALUE">
+                            <shadow type="text" id="=86$7!:cM-?B7:Pr`s)d">
+                              <field name="TEXT">Entre a boton activado</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="execScript" id="sQh=w5+tHsn[gTNlHXwM">
+                              <value name="TEXT">
+                                <shadow type="textMultiline" id="?p=,d#q2bU[cc}GtKhK3">
+                                  <field name="HIGHLIGHT_MODE">javascript</field>
+                                  <field name="TEXT" editor-height="31" editor-width="784.4645244382423">// 1. Configuración de detección (Corrección de clic)&amp;#10;const rect = app.container.getBoundingClientRect();&amp;#10;const mouse = new v3d.Vector2();&amp;#10;&amp;#10;mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;&amp;#10;mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;&amp;#10;&amp;#10;// 2. Raycaster&amp;#10;const raycaster = new v3d.Raycaster();&amp;#10;raycaster.setFromCamera(mouse, app.getCamera());&amp;#10;const intersects = raycaster.intersectObjects(app.scene.children, true);&amp;#10;&amp;#10;let nombreParaPuzzle = "ninguno";&amp;#10;&amp;#10;if (intersects.length &gt; 0) {&amp;#10;    let obj = intersects[0].object;&amp;#10;    &amp;#10;    // Si el nombre es genérico, buscamos al padre&amp;#10;    if (obj.parent &amp;&amp; (obj.name.includes('Mesh') || obj.name.includes('Object'))) {&amp;#10;        nombreParaPuzzle = obj.parent.name;&amp;#10;    } else {&amp;#10;        nombreParaPuzzle = obj.name;&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// 3. VINCULACIÓN CORRECTA (Para v4.12.0)&amp;#10;// En lugar de v3d.puzzles.vars, usamos el objeto VARS directamente&amp;#10;VARS['objeto_detectado'] = nombreParaPuzzle;&amp;#10;</field>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="execScript" id="Lo/68#gYb=/pm*q1?W)v" disabled="true">
+                                  <value name="TEXT">
+                                    <shadow type="textMultiline" id="MUrQ~jmYN?WvJeEOCCZE">
+                                      <field name="HIGHLIGHT_MODE">javascript</field>
+                                      <field name="TEXT" editor-height="25" editor-width="787.9075">const nombreABuscar = VARS['objeto_detectado'];&amp;#10;const objetosAEstudiar = VARS[nombreABuscar] || []; &amp;#10;const opacidadFondo = 0.2; &amp;#10;&amp;#10;// --- FUNCIÓN PARA FORZAR EL OUTLINE SI NO EXISTE ---&amp;#10;function prepararOutline(app) {&amp;#10;    if (!app.postprocessing) {&amp;#10;        app.enablePostprocessing();&amp;#10;    }&amp;#10;    if (!app.postprocessing.outlinePass) {&amp;#10;        // Creamos el pase de silueta manualmente con valores estándar&amp;#10;        const scene = app.scene;&amp;#10;        const camera = app.getCamera();&amp;#10;        const outlinePass = new v3d.OutlinePass(new v3d.Vector2(window.innerWidth, window.innerHeight), scene, camera);&amp;#10;        &amp;#10;        // Configuración visual del brillo&amp;#10;        outlinePass.edgeStrength = 3.0;&amp;#10;        outlinePass.edgeGlow = 0.5;&amp;#10;        outlinePass.edgeThickness = 1.0;&amp;#10;        outlinePass.visibleEdgeColor.set('#00ff00'); // Verde eléctrico para tu panel&amp;#10;        &amp;#10;        app.postprocessing.outlinePass = outlinePass;&amp;#10;        app.postprocessing.composer.addPass(outlinePass);&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// Ejecutamos la preparación&amp;#10;prepararOutline(app);&amp;#10;&amp;#10;let seleccionados = [];&amp;#10;&amp;#10;app.scene.traverse(obj =&gt; {&amp;#10;    if (obj.isMesh &amp;&amp; obj.material) {&amp;#10;        const esProtegido = objetosAEstudiar.includes(obj.name) || &amp;#10;                            (obj.parent &amp;&amp; objetosAEstudiar.includes(obj.parent.name));&amp;#10;&amp;#10;        const mats = Array.isArray(obj.material) ? obj.material : [obj.material];&amp;#10;&amp;#10;        mats.forEach(mat =&gt; {&amp;#10;            mat.transparent = true;&amp;#10;            if (esProtegido) {&amp;#10;                mat.opacity = 1;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(1.0);&amp;#10;                seleccionados.push(obj); // Guardar para el brillo&amp;#10;            } else {&amp;#10;                mat.opacity = opacidadFondo;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(opacidadFondo);&amp;#10;            }&amp;#10;            mat.needsUpdate = true;&amp;#10;        });&amp;#10;    }&amp;#10;});&amp;#10;&amp;#10;// Aplicar la selección al pase de brillo&amp;#10;app.postprocessing.outlinePass.selectedObjects = seleccionados;</field>
+                                    </shadow>
+                                  </value>
+                                  <next>
+                                    <block type="execScript" id="bV5%IcKVP2|gBm#{Gj8U">
+                                      <value name="TEXT">
+                                        <shadow type="textMultiline" id="GQ)ul!9j[/LA4I^Q8v4d">
+                                          <field name="HIGHLIGHT_MODE">javascript</field>
+                                          <field name="TEXT" editor-height="25" editor-width="787.9075">const nombreABuscar = VARS['objeto_detectado'];&amp;#10;&amp;#10;// CORRECCIÓN: Si VARS[nombreABuscar] no existe, usamos una lista vacía []&amp;#10;const objetosAEstudiar = VARS[nombreABuscar] || []; &amp;#10;&amp;#10;const materialesExcepcion = ['-K2_Mat.023', '-K2_Mat.011', '-K4_Mat.023','-K5_Mat.023', '-K6_Mat.024', '-K7_Mat.023'];&amp;#10;const opacidadFondo = 0.2; &amp;#10;&amp;#10;app.scene.traverse(obj =&gt; {&amp;#10;    if (obj.isMesh &amp;&amp; obj.material) {&amp;#10;        &amp;#10;        // Ahora .includes() no fallará porque objetosAEstudiar siempre será al menos []&amp;#10;        const esProtegido = objetosAEstudiar.includes(obj.name) || &amp;#10;                            (obj.parent &amp;&amp; objetosAEstudiar.includes(obj.parent.name));&amp;#10;&amp;#10;        const mats = Array.isArray(obj.material) ? obj.material : [obj.material];&amp;#10;&amp;#10;        mats.forEach(mat =&gt; {&amp;#10;            mat.transparent = true;&amp;#10;            &amp;#10;            if (materialesExcepcion.includes(mat.name)) {&amp;#10;                mat.opacity = 0.2;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(0.2);&amp;#10;            } &amp;#10;            else if (esProtegido) {&amp;#10;                mat.opacity = 1;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(1.0);&amp;#10;            } else {&amp;#10;                mat.opacity = opacidadFondo;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(opacidadFondo);&amp;#10;            }&amp;#10;            &amp;#10;            mat.needsUpdate = true;&amp;#10;        });&amp;#10;    }&amp;#10;});</field>
+                                        </shadow>
+                                      </value>
+                                      <next>
+                                        <block type="variables_set" id="aZ9XX/m;{NQr.k7lpv4v">
+                                          <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                          <value name="VALUE">
+                                            <block type="variables_get" id="jMrU2i--}JWGR5I)x{#[">
+                                              <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="variables_set" id="}or+Hm@s4UPUe0$8Te.?">
+                                              <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                              <value name="VALUE">
+                                                <block type="text" id="$9R!4-v%YUl?wvVaFW?g">
+                                                  <field name="TEXT">Ocupado</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="console.log" id="%!4G0c/rb7{hoTQU+g9)">
+                                                  <value name="VALUE">
+                                                    <shadow type="text" id="E%bw:*c$I4Na(:Y*K/wL">
+                                                      <field name="TEXT">Hello, Verge!</field>
+                                                    </shadow>
+                                                    <block type="variables_get" id="_Eb,Ra7^f81KGC?XN7Io">
+                                                      <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="console.log" id="#lU^y!M}FkBLG11AV)f,">
+                                                      <value name="VALUE">
+                                                        <shadow type="text" id="H}8#TW2YV5yle%K9Hj.x">
+                                                          <field name="TEXT">Hello, Verge!</field>
+                                                        </shadow>
+                                                        <block type="variables_get" id="gJc3[@/7$nrmRWLxJMPn">
+                                                          <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="console.log" id="BUFEcZxSJXLB1_~#D7M^">
+                          <value name="VALUE">
+                            <shadow type="text" id="H}8#TW2YV5yle%K9Hj.x">
+                              <field name="TEXT">Llegue aqui</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="execScript" id="aV$#I0nX{zcdBv(;yGhd">
+                              <value name="TEXT">
+                                <shadow type="textMultiline" id="soV%mQT4,CBy}6^],}w(">
+                                  <field name="HIGHLIGHT_MODE">javascript</field>
+                                  <field name="TEXT" editor-height="32" editor-width="784.4645244382423">// 1. Configuración de detección (Corrección de clic)&amp;#10;const rect = app.container.getBoundingClientRect();&amp;#10;const mouse = new v3d.Vector2();&amp;#10;&amp;#10;mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;&amp;#10;mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;&amp;#10;&amp;#10;// 2. Raycaster&amp;#10;const raycaster = new v3d.Raycaster();&amp;#10;raycaster.setFromCamera(mouse, app.getCamera());&amp;#10;const intersects = raycaster.intersectObjects(app.scene.children, true);&amp;#10;&amp;#10;let nombreParaPuzzle = "ninguno";&amp;#10;&amp;#10;if (intersects.length &gt; 0) {&amp;#10;    let obj = intersects[0].object;&amp;#10;    &amp;#10;    // Si el nombre es genérico, buscamos al padre&amp;#10;    if (obj.parent &amp;&amp; (obj.name.includes('Mesh') || obj.name.includes('Object'))) {&amp;#10;        nombreParaPuzzle = obj.parent.name;&amp;#10;    } else {&amp;#10;        nombreParaPuzzle = obj.name;&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// 3. VINCULACIÓN CORRECTA (Para v4.12.0)&amp;#10;// En lugar de v3d.puzzles.vars, usamos el objeto VARS directamente&amp;#10;VARS['objeto_detectado'] = nombreParaPuzzle;&amp;#10;&amp;#10;console.log("Variable 'objeto_detectado' enviada a Puzzles: " + nombreParaPuzzle);</field>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="controls_if" id="nAS_#Grb^ZFN2szKdo(f">
+                                  <value name="IF0">
+                                    <block type="logic_compare" id="BgjN*%w2QX}u3h|~!J#N">
+                                      <field name="OP">EQ</field>
+                                      <value name="A">
+                                        <block type="variables_get" id="nKV:pE#7[Vhj3NcU^15E">
+                                          <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="variables_get" id="#%`(G;ABJUi%4X+]/L8)">
+                                          <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <statement name="DO0">
+                                    <block type="variables_set" id="4;n=V!7,C-t$LnD71wkc">
+                                      <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                      <value name="VALUE">
+                                        <block type="text" id="AETH%oYx8aJvo]e4$NG?">
+                                          <field name="TEXT">Ocupado</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="execScript" id="6NzQaqFP{#)~=3|*zfIF">
+                                          <value name="TEXT">
+                                            <shadow type="textMultiline" id="U*ae|cj0%1@Fa,]B0d.7">
+                                              <field name="HIGHLIGHT_MODE">javascript</field>
+                                              <field name="TEXT" editor-height="25" editor-width="787.9075">const nombreABuscar = VARS['objeto_detectado'];&amp;#10;&amp;#10;// CORRECCIÓN: Si VARS[nombreABuscar] no existe, usamos una lista vacía []&amp;#10;const objetosAEstudiar = VARS[nombreABuscar] || []; &amp;#10;&amp;#10;const materialesExcepcion = ['-K2_Mat.023', '-K2_Mat.011', '-K4_Mat.023','-K5_Mat.023', '-K6_Mat.024', '-K7_Mat.023'];&amp;#10;const opacidadFondo = 1; &amp;#10;&amp;#10;app.scene.traverse(obj =&gt; {&amp;#10;    if (obj.isMesh &amp;&amp; obj.material) {&amp;#10;        &amp;#10;        // Ahora .includes() no fallará porque objetosAEstudiar siempre será al menos []&amp;#10;        const esProtegido = objetosAEstudiar.includes(obj.name) || &amp;#10;                            (obj.parent &amp;&amp; objetosAEstudiar.includes(obj.parent.name));&amp;#10;&amp;#10;        const mats = Array.isArray(obj.material) ? obj.material : [obj.material];&amp;#10;&amp;#10;        mats.forEach(mat =&gt; {&amp;#10;            mat.transparent = true;&amp;#10;            &amp;#10;            if (materialesExcepcion.includes(mat.name)) {&amp;#10;                mat.opacity = 0.2;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(0.2);&amp;#10;            } &amp;#10;            else if (esProtegido) {&amp;#10;                mat.opacity = 1;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(1.0);&amp;#10;            } else {&amp;#10;                mat.opacity = opacidadFondo;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(opacidadFondo);&amp;#10;            }&amp;#10;            &amp;#10;            mat.needsUpdate = true;&amp;#10;        });&amp;#10;    }&amp;#10;});</field>
+                                            </shadow>
+                                          </value>
+                                          <next>
+                                            <block type="variables_set" id="ZRTcHgIYF_i$^A-,vO29">
+                                              <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                              <value name="VALUE">
+                                                <block type="text" id="(~/8|@w2ubEoUA~ZSb28">
+                                                  <field name="TEXT">Ninguno</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="console.log" id="J#TTMcab_vu5smy#V|Wy">
+                                                  <value name="VALUE">
+                                                    <shadow type="text" id="*(-oi@%/2Ps)7V8BBjhO">
+                                                      <field name="TEXT">Hello, Verge!</field>
+                                                    </shadow>
+                                                    <block type="variables_get" id="E!x#@864H`e@27EW6hO4">
+                                                      <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="console.log" id="JcB~22-lx3Q[+sV9)C^G">
+                                                      <value name="VALUE">
+                                                        <shadow type="text" id="cD5VwES@D~,wxuwtiy$2">
+                                                          <field name="TEXT">Hello, Verge!</field>
+                                                        </shadow>
+                                                        <block type="variables_get" id="72|rc{_V{i/#b;MU2:;n">
+                                                          <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="r+Q!BGB8{fw;pYUA%}OO" x="-1222" y="-136">
+      <field name="VAR" id="_@Dc|ShN8=6ZI,g=6^xt">-Q1</field>
+      <value name="VALUE">
+        <block type="lists_create_with" id="9^.OWTc`:J?-P`LUuU-6">
+          <mutation items="5"></mutation>
+          <value name="ADD0">
+            <block type="objectList" id="4AR;Iit*9ur{|jM|}A,7">
+              <field name="FIELDNAME">-Q1</field>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="objectList" id="W0TK~R7oU#paF4/2[et=">
+              <field name="FIELDNAME">-KM1</field>
+            </block>
+          </value>
+          <value name="ADD2">
+            <block type="objectList" id="#sq@giSi=.YeF-x+nO2|">
+              <field name="FIELDNAME">-Q2</field>
+            </block>
+          </value>
+          <value name="ADD3">
+            <block type="objectList" id="=%p.e]1ikMWP?WQj:*{!">
+              <field name="FIELDNAME">-K6</field>
+            </block>
+          </value>
+          <value name="ADD4">
+            <block type="objectList" id="6FgIRvyI,Nx[a|@eH(Th">
+              <field name="FIELDNAME">-K7</field>
+            </block>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="execScript" id="8tlZ@OPx9)k()lJCj}pn" disabled="true" x="1679" y="-67">
+      <value name="TEXT">
+        <shadow type="textMultiline" id=";c8Ie0ynJRiPKg{W9[@0">
+          <field name="HIGHLIGHT_MODE">javascript</field>
+          <field name="TEXT" editor-height="31" editor-width="784.4645244382423">// 1. Obtener coordenadas precisas (corrección de desfase)&amp;#10;const container = app.container;&amp;#10;const rect = container.getBoundingClientRect();&amp;#10;const mouse = new v3d.Vector2();&amp;#10;&amp;#10;mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;&amp;#10;mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;&amp;#10;&amp;#10;// 2. Lanzar el rayo de detección&amp;#10;const raycaster = new v3d.Raycaster();&amp;#10;raycaster.setFromCamera(mouse, app.getCamera());&amp;#10;const intersects = raycaster.intersectObjects(app.scene.children, true);&amp;#10;&amp;#10;if (intersects.length &gt; 0) {&amp;#10;    let objetoTocado = intersects[0].object;&amp;#10;    &amp;#10;    // --- LÓGICA DE RASTREO DE NOMBRE ---&amp;#10;    // A veces Verge3D nombra la malla como "Mesh_001", &amp;#10;    // pero nosotros queremos el nombre del Padre (el Objeto de Blender).&amp;#10;    let nombreFinal = objetoTocado.name;&amp;#10;    &amp;#10;    // Si el nombre parece ser una malla genérica, buscamos al padre&amp;#10;    if (objetoTocado.parent &amp;&amp; (nombreFinal.includes('Mesh') || nombreFinal.includes('pCube'))) {&amp;#10;        nombreFinal = objetoTocado.parent.name;&amp;#10;    }&amp;#10;&amp;#10;    // 3. Salida de datos limpia en consola&amp;#10;    console.log("%c --- DETECCIÓN DE COMPONENTE ---", "color: #00ff00; font-weight: bold;");&amp;#10;    console.log("Nombre detectado: %c" + nombreFinal, "color: #00fbff; font-size: 14px; font-weight: bold;");&amp;#10;    console.log("ID Único (UUID): " + objetoTocado.uuid);&amp;#10;    console.log("Tipo de objeto: " + objetoTocado.type);&amp;#10;    console.log("---------------------------------");&amp;#10;&amp;#10;} else {&amp;#10;    console.log("%c Clic en el vacío: No se detectó nada.", "color: #ff9900;");&amp;#10;}</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="controls_ifelse" id="/oiK+i$)27RGu/^|@,/{" disabled="true" x="512" y="401">
+      <value name="IF0">
+        <block type="logic_compare" id="j@flE#Opkv_$8NQ-qr;s">
+          <field name="OP">EQ</field>
+          <value name="A">
+            <block type="variables_get" id="PXs.oFdw5t_^gE5gy^8y">
+              <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+            </block>
+          </value>
+          <value name="B">
+            <block type="text" id="3E)p#6}~q!RP,KU~[,4X">
+              <field name="TEXT">Ninguno</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO0">
+        <block type="console.log" id="#y8M9+|IpViesFV{mt/c">
+          <value name="VALUE">
+            <shadow type="text" id="%brgv=4le$ltB4Go]rZ8">
+              <field name="TEXT">Entre a boton activado</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="execScript" id="^T}k1h4wta/PkNV-b]G!">
+              <value name="TEXT">
+                <shadow type="textMultiline" id="$4(3P[nYVo1dgE}[C2n2">
+                  <field name="HIGHLIGHT_MODE">javascript</field>
+                  <field name="TEXT" editor-height="31" editor-width="784.4645244382423">// 1. Configuración de detección (Corrección de clic)&amp;#10;const rect = app.container.getBoundingClientRect();&amp;#10;const mouse = new v3d.Vector2();&amp;#10;&amp;#10;mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;&amp;#10;mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;&amp;#10;&amp;#10;// 2. Raycaster&amp;#10;const raycaster = new v3d.Raycaster();&amp;#10;raycaster.setFromCamera(mouse, app.getCamera());&amp;#10;const intersects = raycaster.intersectObjects(app.scene.children, true);&amp;#10;&amp;#10;let nombreParaPuzzle = "ninguno";&amp;#10;&amp;#10;if (intersects.length &gt; 0) {&amp;#10;    let obj = intersects[0].object;&amp;#10;    &amp;#10;    // Si el nombre es genérico, buscamos al padre&amp;#10;    if (obj.parent &amp;&amp; (obj.name.includes('Mesh') || obj.name.includes('Object'))) {&amp;#10;        nombreParaPuzzle = obj.parent.name;&amp;#10;    } else {&amp;#10;        nombreParaPuzzle = obj.name;&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// 3. VINCULACIÓN CORRECTA (Para v4.12.0)&amp;#10;// En lugar de v3d.puzzles.vars, usamos el objeto VARS directamente&amp;#10;VARS['objeto_detectado'] = nombreParaPuzzle;&amp;#10;&amp;#10;console.log("Variable 'objeto_detectado' enviada a Puzzles: " + nombreParaPuzzle);</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="execScript" id="1mv;l-aeJC_cS|!~#V/+">
+                  <value name="TEXT">
+                    <shadow type="textMultiline" id="n9w?G2R@o8xNd/ge~186">
+                      <field name="HIGHLIGHT_MODE">javascript</field>
+                      <field name="TEXT" editor-height="25" editor-width="787.9075">const nombreABuscar = VARS['objeto_detectado'];&amp;#10;&amp;#10;// CORRECCIÓN: Si VARS[nombreABuscar] no existe, usamos una lista vacía []&amp;#10;const objetosAEstudiar = VARS[nombreABuscar] || []; &amp;#10;&amp;#10;const materialesExcepcion = ['-K2_Mat.023', '-K2_Mat.011', '-K4_Mat.023','-K5_Mat.023', '-K6_Mat.024', '-K7_Mat.023'];&amp;#10;const opacidadFondo = 0.2; &amp;#10;&amp;#10;app.scene.traverse(obj =&gt; {&amp;#10;    if (obj.isMesh &amp;&amp; obj.material) {&amp;#10;        &amp;#10;        // Ahora .includes() no fallará porque objetosAEstudiar siempre será al menos []&amp;#10;        const esProtegido = objetosAEstudiar.includes(obj.name) || &amp;#10;                            (obj.parent &amp;&amp; objetosAEstudiar.includes(obj.parent.name));&amp;#10;&amp;#10;        const mats = Array.isArray(obj.material) ? obj.material : [obj.material];&amp;#10;&amp;#10;        mats.forEach(mat =&gt; {&amp;#10;            mat.transparent = true;&amp;#10;            &amp;#10;            if (materialesExcepcion.includes(mat.name)) {&amp;#10;                mat.opacity = 0.2;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(0.2);&amp;#10;            } &amp;#10;            else if (esProtegido) {&amp;#10;                mat.opacity = 1;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(1.0);&amp;#10;            } else {&amp;#10;                mat.opacity = opacidadFondo;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(opacidadFondo);&amp;#10;            }&amp;#10;            &amp;#10;            mat.needsUpdate = true;&amp;#10;        });&amp;#10;    }&amp;#10;});</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="variables_set" id="~eoL=|,`x^+__TiHr7pE">
+                      <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                      <value name="VALUE">
+                        <block type="variables_get" id="aN68uqVT:lAA8TZoar/O">
+                          <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="variables_set" id="q[:#^}/OfoF3=$c@V]kK">
+                          <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                          <value name="VALUE">
+                            <block type="text" id="~K(rK0?8OsWihk?iAtOb">
+                              <field name="TEXT">Ocupado</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="console.log" id="SCd]0kWplsz%`^PRx~t*">
+                              <value name="VALUE">
+                                <shadow type="text" id="E%bw:*c$I4Na(:Y*K/wL">
+                                  <field name="TEXT">Hello, Verge!</field>
+                                </shadow>
+                                <block type="variables_get" id="ZLH#cK~l/a)%Dl?!Xm,p">
+                                  <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="console.log" id="(.o=Gjri;}mh9;H5k.UP">
+                                  <value name="VALUE">
+                                    <shadow type="text" id="*cv/~zeT8ONgm5SBJGD`">
+                                      <field name="TEXT">Hello, Verge!</field>
+                                    </shadow>
+                                    <block type="variables_get" id="t=2~FxXE;XRp*oPKl:p]">
+                                      <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <statement name="ELSE">
+        <block type="controls_ifelse" id="+}aU?,4{tIX$(y9xUm0c">
+          <value name="IF0">
+            <block type="logic_compare" id="-Lr0Q`[B9/4f]!^sh$cs">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="u!y0jgb]C)?^yMp.l`{E">
+                  <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="text" id="DY}z3$^1gBtP[Es56-xE">
+                  <field name="TEXT">Ocupado</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="execScript" id="mt{@e)*7E^70M0#{{A/n">
+              <value name="TEXT">
+                <shadow type="textMultiline" id="rhv+O}A3ylWt*D%=8C6T">
+                  <field name="HIGHLIGHT_MODE">javascript</field>
+                  <field name="TEXT" editor-height="38" editor-width="784.4645244382423">// 1. Configuración de detección (Corrección de clic)&amp;#10;const rect = app.container.getBoundingClientRect();&amp;#10;const mouse = new v3d.Vector2();&amp;#10;&amp;#10;mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;&amp;#10;mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;&amp;#10;&amp;#10;// 2. Raycaster&amp;#10;const raycaster = new v3d.Raycaster();&amp;#10;raycaster.setFromCamera(mouse, app.getCamera());&amp;#10;const intersects = raycaster.intersectObjects(app.scene.children, true);&amp;#10;&amp;#10;let nombreParaPuzzle = "ninguno";&amp;#10;&amp;#10;if (intersects.length &gt; 0) {&amp;#10;    let obj = intersects[0].object;&amp;#10;    &amp;#10;    // Si el nombre es genérico, buscamos al padre&amp;#10;    if (obj.parent &amp;&amp; (obj.name.includes('Mesh') || obj.name.includes('Object'))) {&amp;#10;        nombreParaPuzzle = obj.parent.name;&amp;#10;    } else {&amp;#10;        nombreParaPuzzle = obj.name;&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// 3. VINCULACIÓN CORRECTA (Para v4.12.0)&amp;#10;// En lugar de v3d.puzzles.vars, usamos el objeto VARS directamente&amp;#10;VARS['objeto_detectado'] = nombreParaPuzzle;&amp;#10;&amp;#10;console.log("Variable 'objeto_detectado' enviada a Puzzles: " + nombreParaPuzzle);</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="controls_if" id="i(61,+bkI_b+shkhp!pw">
+                  <value name="IF0">
+                    <block type="logic_compare" id="[Y0UNTxI]iVQ,l#~LxHa">
+                      <field name="OP">EQ</field>
+                      <value name="A">
+                        <block type="variables_get" id="--k1Lb:FocVk~wOgQrkM">
+                          <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="variables_get" id="R/`q1utMn@=jn6opr6D:">
+                          <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="variables_set" id="PWf.*_xC:.8eVa8lO%_u">
+                      <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                      <value name="VALUE">
+                        <block type="text" id="oHVaXPSDC^5zqzB+i!np">
+                          <field name="TEXT">Ocupado</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="execScript" id="~/`@UL5bsEMGRsvBVrV`">
+                          <value name="TEXT">
+                            <shadow type="textMultiline" id="i`I:4adknWaDK6oY?:S:">
+                              <field name="HIGHLIGHT_MODE">javascript</field>
+                              <field name="TEXT" editor-height="25" editor-width="787.9075">const nombreABuscar = VARS['objeto_detectado'];&amp;#10;&amp;#10;// CORRECCIÓN: Si VARS[nombreABuscar] no existe, usamos una lista vacía []&amp;#10;const objetosAEstudiar = VARS[nombreABuscar] || []; &amp;#10;&amp;#10;const materialesExcepcion = ['-K2_Mat.023', '-K2_Mat.011', '-K4_Mat.023','-K5_Mat.023', '-K6_Mat.024', '-K7_Mat.023'];&amp;#10;const opacidadFondo = 1; &amp;#10;&amp;#10;app.scene.traverse(obj =&gt; {&amp;#10;    if (obj.isMesh &amp;&amp; obj.material) {&amp;#10;        &amp;#10;        // Ahora .includes() no fallará porque objetosAEstudiar siempre será al menos []&amp;#10;        const esProtegido = objetosAEstudiar.includes(obj.name) || &amp;#10;                            (obj.parent &amp;&amp; objetosAEstudiar.includes(obj.parent.name));&amp;#10;&amp;#10;        const mats = Array.isArray(obj.material) ? obj.material : [obj.material];&amp;#10;&amp;#10;        mats.forEach(mat =&gt; {&amp;#10;            mat.transparent = true;&amp;#10;            &amp;#10;            if (materialesExcepcion.includes(mat.name)) {&amp;#10;                mat.opacity = 0.2;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(0.2);&amp;#10;            } &amp;#10;            else if (esProtegido) {&amp;#10;                mat.opacity = 1;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(1.0);&amp;#10;            } else {&amp;#10;                mat.opacity = opacidadFondo;&amp;#10;                if (mat.nodeValue) mat.nodeValue.fill(opacidadFondo);&amp;#10;            }&amp;#10;            &amp;#10;            mat.needsUpdate = true;&amp;#10;        });&amp;#10;    }&amp;#10;});</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="variables_set" id="eU/FVeG2*z~WaWmzV.ZI">
+                              <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                              <value name="VALUE">
+                                <block type="text" id="{ER;+fn8BTPUUStsf)vp">
+                                  <field name="TEXT">Ninguno</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="console.log" id="p;orH4nl2N?uTw1yFzx$">
+                                  <value name="VALUE">
+                                    <shadow type="text" id="*(-oi@%/2Ps)7V8BBjhO">
+                                      <field name="TEXT">Hello, Verge!</field>
+                                    </shadow>
+                                    <block type="variables_get" id="rE^7qlV/JmaME|iK~pUJ">
+                                      <field name="VAR" id="zZR*tw]T.Lho{Ea^vq}W">Boton Activado</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="console.log" id="^=4{P=`FY^=BFo-o~e](">
+                                      <value name="VALUE">
+                                        <shadow type="text" id="Bt2OxDz($zH-/g,zqU;`">
+                                          <field name="TEXT">Hello, Verge!</field>
+                                        </shadow>
+                                        <block type="variables_get" id="mJ+b(PO;Ttt01=+flh^$">
+                                          <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="variables_set" id="Xf[rmEk*vo~ve}n4-ewQ">
+              <field name="VAR" id="8YoAMI!#i}@uWN{qxm]j">objeto_detectado</field>
+              <value name="VALUE">
+                <block type="text" id="P/)6_CI{Q$xP;DylQUs|">
+                  <field name="TEXT">Ocupado</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1383" viewport-y="96" viewport-w="714" viewport-h="648.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

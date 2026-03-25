@@ -1,0 +1,38 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="593" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="20.764211062948334" scrolly="183.94819139139395" scale="0.6768393620286868">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="|SwvWp,zm`OlIH{xyhbz" inline="false" x="249" y="9">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false" useid="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="C7_1{v5yI=}.bxUT`n06">
+          <field name="FIELDNAME">-Q1</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="console.log" id="@vd4A]c]!d~--mq*/|e$">
+          <value name="VALUE">
+            <shadow type="text" id="Y$$42jr_npNZa]X65|y`">
+              <field name="TEXT">Hello, Verge!</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="execScript" id="8tlZ@OPx9)k()lJCj}pn">
+              <value name="TEXT">
+                <shadow type="textMultiline" id=";c8Ie0ynJRiPKg{W9[@0">
+                  <field name="HIGHLIGHT_MODE">javascript</field>
+                  <field name="TEXT" editor-height="10" editor-width="520">var _app = app || appInstance || v3d.apps[0];&amp;#10;&amp;#10;if (_app &amp;&amp; _app.scene) {&amp;#10;    _app.scene.traverse(function(obj) {&amp;#10;        if (obj.isMesh &amp;&amp; obj.material) {&amp;#10;            var materials = Array.isArray(obj.material) ? obj.material : [obj.material];&amp;#10;            &amp;#10;            materials.forEach(function(mat) {&amp;#10;                // REVISIÓN DE NODOS: Esto te dirá en consola qué nombres existen realmente&amp;#10;                for (var prop in mat) {&amp;#10;                    if (prop.includes('node') &amp;&amp; mat[prop]) {&amp;#10;                        for (var nodeName in mat[prop]) {&amp;#10;                            // Si el nombre contiene "Control" o "Alfa", lo forzamos a 0.2&amp;#10;                            if (nodeName.toLowerCase().includes('control_alfa')) {&amp;#10;                                mat[prop][nodeName].value = 0.2;&amp;#10;                                console.log('¡ENCONTRADO! Nodo: ' + nodeName + ' en material: ' + mat.name);&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;                &amp;#10;                // Intento por la API estándar por si acaso&amp;#10;                v3d.puzzles.setMaterialValue(mat.name, 'Control_Alfa', 0.2);&amp;#10;            });&amp;#10;        }&amp;#10;    });&amp;#10;}</field>
+                </shadow>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1188" viewport-y="37" viewport-w="714" viewport-h="648.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
